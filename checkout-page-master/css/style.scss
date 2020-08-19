@@ -1,0 +1,312 @@
+$checkout: #4E5150;
+$headingSec: #333333;
+$subhd: #4F4F4F;
+$price: #F2994A;
+$billing: #F2F2F2;
+$billing_line: #BDBDBD;
+$plholder: #828282; //and input border
+$white: #ffffff;
+$br: 20px;
+// font-size: 14px;
+// font-size: 12px;
+// font-size: 16px;
+// font-size: 10px;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Montserrat';
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  // font-size: 36px;
+  color: $checkout;
+}
+
+h3 {
+  color: $headingSec;
+  font-size: 14px;
+}
+
+h1,h3,p,label {
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 20px 0 5px;
+  font-size: 12px;
+  color: $subhd;
+}
+
+button {
+  display: block;
+  width: 166px;
+  height: 54px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background: $price;
+  color: $white;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  margin: 1.5rem 0 0 auto;
+}
+
+button:hover {
+  background: hsl(28, 87%, 50%);
+}
+
+::placeholder {
+  font-family: 'Montserrat';
+}
+
+.error {
+  position: absolute;
+  display: none;
+  margin-left: 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: red;
+  font-weight: 400;
+}
+
+.main {
+  margin: 2rem auto;
+  max-width: 430px;
+
+  .billing {
+    margin: 1rem 0 2rem;
+    background: $billing;
+    border-radius: $br;
+    padding: 1.5rem;
+
+    &_card {
+      display: flex;
+      justify-content: space-between;
+
+      .item_image {
+        width: 130px;
+        height: 125px;
+        background: url('../images/photo1.png') center / cover;
+        border-radius: $br;
+      }
+      .item_image_one {
+        background: url('../images/photo1.png') center / cover;
+      }
+      
+      .item_image_two {
+        background: url('../images/photo2.png') center / cover;
+      
+      }
+
+      .item_content {
+        flex: 1;
+        margin-left: 20px;
+        
+        .pricing {
+          display: flex;
+          align-items: center;
+          margin: .5rem 0 2rem;
+          
+          p + p {
+            font-size: 10px;
+            margin-left: 10px;
+            text-decoration: line-through;
+            color: $plholder;
+          }
+        
+          .price {
+            color: $price;
+            font-size: 14px;
+          }
+        }
+
+        .inc_dec {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 130px;
+          height: 50px;
+          border: 2px solid $billing_line;
+          border-radius: 10px;
+          padding: .5rem;
+          text-align: center;
+
+          span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: hsl(0, 0%, 85%);
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          h3 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    &_card + .billing_card {
+      margin-top: 2rem;
+    }
+
+    &_total {
+      margin-top: 5rem;
+      color: $subhd;
+
+      &_one,&_two {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $billing_line;
+        padding: .6em;
+      }
+    }
+
+  }
+
+  .contact {
+    margin: 0 0 3rem 0;
+
+    input:not([type="checkbox"]),select {
+      display: block;
+      width: 100%;
+      padding: .5rem 0 .5rem 3rem;
+      border-radius: 10px;
+      border: 2px solid $billing_line;
+      font-family: 'Montserrat';
+      font-weight: 500;
+      color: $subhd;
+    }
+
+    .icon {
+      position: relative;
+    }
+
+    span {
+      position: absolute;
+      top: 45%;
+      left: 25px;
+      transform: translate(-50%);
+    }
+
+    &_fill1 {
+      margin: 2.5rem 0;
+
+    }
+
+    &_fill2 {
+      .two {
+        display: flex;
+        // gap: 20px;
+
+        &_one {
+          position: relative;
+          flex: 1;
+          margin-right: 10px;
+
+          select {
+            appearance: none;
+            font-family: 'Montserrat';
+            cursor: pointer;
+          }
+
+          span {
+            position: absolute;
+            top: 60%;
+            right: 0;
+            left: 85%;
+            width: 20px;
+            height: 20px;
+            background: hsl(0, 0%, 85%);
+            border-radius: 5px;
+            pointer-events: none;
+            transform: translateX(-50%);
+          }
+
+          .world {
+            top: 60%;
+            left: 20px;
+            background: none;
+            transform: translateX(-50%);
+          }
+        }
+        
+        &_two {
+          flex: 1;
+          margin-left: 10px;
+
+          span {
+            top: 60%;
+            transform: translateX(-50%);
+          }
+
+        }
+      }
+
+      .three {
+        display: flex;
+        align-items: center;
+        margin: 15px 0 0;
+        position: relative;
+
+        label {
+          margin: 0 10px 0;
+        }
+      }
+    }
+  }
+
+  .container > p {
+    text-align: center;
+    color: $plholder;
+    font-size: 14px;
+  }
+
+  .success {
+    display: none;
+    margin-bottom: 2em;
+    padding: 1rem;
+    background: rgb(84, 204, 73);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .showSuccess {
+    display: block;
+    animation: showS 200ms ease-in-out 200ms;
+  }
+
+  @keyframes showS {
+    100% {
+      display: none;
+    }
+  }
+}
+
+@import "desktop";
+@import "material-icon";
+
+
+
+
