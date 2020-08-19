@@ -1,3 +1,3 @@
-# Hello
-## I'm Favourite
+# Chechout Page
+
 [Live Demo](https://checkout-page.netlify.app)
