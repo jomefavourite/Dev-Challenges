@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+$h1: #000000;
+$main-p: #4F4F4F;
+$time-first: #BDBDBD;
+$gold: #F2994A;
+$time:#333333; //all P
+$yourName: #A9A9A9;
+$play: 'Playfair Display', sans-serif;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.flx2 {
+  display: flex;
+  align-items: flex-start;
+}
+
+p {
+  line-height: 25px;
+  color: $time;
+}
+
+h1,h2,h3 {
+  font-family: $play;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.main {
+  margin: 1.5rem auto;
+
+  h1 {
+    font-size: 24px;
+  }
+
+  &_details {
+    font-style: italic;
+
+    .flx {
+      display: flex;
+      align-items: flex-start;
+      margin: .5rem 0 0;
+    }
+    .icon {
+      display: block;
+      width: 20px;
+      margin-top: 3px;
+      margin-right: 10px;
+    }
+    p {
+      flex: 6;
+      font-size: 12px;
+      max-width: 572px;
+      line-height: 15px;
+    }
+    &_img {
+      border-radius: 15px;
+      margin: 1.5rem 0;
+    }
+  }
+
+  .times {
+    .gold {
+      color: $gold;
+    }
+    .times2 {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+    }
+
+    .time {
+      display: flex;
+      align-content: stretch;
+
+      p {
+        line-height: normal;
+        margin-left: 5px;
+      }
+
+      p:first-child {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 8px;
+        color: $time-first;
+      }
+
+      p:last-child {
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .ingredients {
+    margin: 2em 0;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-style: italic;
+      margin: 0 0 1.5rem;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    input {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+    .ingredients__one > div {
+      margin-top: .3em;
+    }
+
+    .ingredients__two {
+      margin-top: 2em;
+    }
+
+    .ingredients__two > div {
+      margin-top: .3em;
+    }
+  }
+
+  .intructions {
+    margin-bottom: 2em;
+
+    .flx3 {
+      display: flex;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    & > div + div {
+      margin-top: 1em;
+    }
+
+    .num {
+      display: block;
+      width: 50px;
+      height: 40px;
+      background: $gold;
+      padding: 0 1rem;
+      border-radius: 10px;
+      font-family: $play;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-right: 20px;
+    }
+  }
+
+  .source {
+    margin-bottom: 5rem;
+    color: $yourName;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .fotter {
+    text-align: center;
+    color: $yourName;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+@import "desktop";
+@import "material-icons";
