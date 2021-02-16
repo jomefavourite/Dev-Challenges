@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect, useState} from 'react';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Main';
+import SkeletonCard from './components/SkeletonCard';
+import GlobalContextProvider from './context/GlobalContext';
+import HeaderContextProvider from './context/HeaderContext';
+import {GlobalStyles} from './globalStyles';
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContextProvider>
+      <GlobalStyles />
+      <HeaderContextProvider>
+        <Header />
+      </HeaderContextProvider>
+      {loading && <SkeletonCard />}
+      {!loading && <Main />}
+      <Footer />
+    </GlobalContextProvider>
   );
-}
+};
 
 export default App;
