@@ -1,0 +1,77 @@
+.desktop__grid {
+  @include large() {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "profile skill skill"
+      "profile project project"
+      "experience project project"
+      "hobbies blog blog"
+      ". blog blog";
+    grid-gap: 20px;
+
+    .profile {
+      grid-area: profile;
+      display: block;
+
+      &__image {
+        width: 100%;
+        height: auto;
+      }
+
+      &__content {
+        margin-left: 0;
+      }
+    }
+
+    .skills__container {
+      grid-area: skill;
+    }
+
+    .experience__section {
+      grid-area: experience;
+      .experience__grid {
+        display: block;
+        gap: 0;
+
+        & > * {
+          &:last-child {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .hobbies {
+      &__grid {
+        display: block;
+      }
+    }
+
+    .projects__section {
+      grid-area: project;
+
+      .project + .project {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .blogs__section {
+      grid-area: blog;
+    }
+
+    .hobbies {
+      grid-area: hobbies;
+    }
+
+    section + section,
+    article + article {
+      margin-top: 0rem;
+    }
+
+    article + article {
+      margin-top: 1.5rem;
+    }
+  }
+}

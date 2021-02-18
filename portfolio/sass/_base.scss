@@ -1,0 +1,150 @@
+// Colors
+$heading: #4f4f4f;
+$heading2: #333333;
+$text: #828282;
+$bg: #f0f0f0;
+$btnBlue: #5c94e1;
+$skillsBlue: #2f80edb3;
+$white: #fff;
+
+// utilities
+$bradius: 10px;
+$shadow: 0px 0px 5px #8080803a;
+$pd: 1.5rem;
+
+// Responsive
+$md: 768px;
+$lg: 1024px;
+
+@mixin cardStyle() {
+  background: $white;
+  padding: $pd;
+  box-shadow: $shadow;
+  border-radius: $bradius;
+}
+
+@mixin barAnimation($name, $last) {
+  @keyframes #{$name} {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: $last;
+    }
+  }
+}
+
+@mixin nameAnim($name) {
+  animation: #{$name} 1000ms ease-out forwards;
+}
+
+@mixin img() {
+  width: 100%;
+  height: 200px;
+  background: $text;
+  border-radius: $bradius;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.144);
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 200ms ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  margin: 3rem auto;
+  max-width: 500px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background: $bg;
+}
+
+h1,
+h2 {
+  color: $heading;
+}
+
+h3,
+h4 {
+  color: $heading2;
+  font-weight: 500;
+}
+
+p,
+small {
+  color: $text;
+}
+
+%btn {
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: $bradius + 10px;
+  text-decoration: none;
+  transition: transform 200ms ease-in;
+
+  &:hover {
+    transform: scale(0.95);
+    box-shadow: 0 4px 2px rgba(128, 128, 128, 0.363);
+  }
+}
+
+.pryBtn {
+  @extend %btn;
+  background: $btnBlue;
+  color: $white;
+}
+
+.secBtn {
+  @extend %btn;
+  background: $white;
+  color: $btnBlue;
+  border: 1px solid grey;
+}
+
+img {
+  width: 100%;
+}
+
+section + section,
+article + article {
+  margin-top: 2rem;
+}
+
+.project__header,
+.blog__header {
+  @include cardStyle();
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}

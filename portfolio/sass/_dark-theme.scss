@@ -1,0 +1,47 @@
+
+// $shadow: 0px 0px 5px #8080806b;
+$shadow: 0px 0px 5px #8080803a;
+
+body.dark-theme {
+  $heading: #ffffff;
+  $heading2: #ebe0e0;
+  $text: #ffffff;
+  $bg: #575757;
+  $shadow: 0px 0px 5px #b8b8b846;
+
+  background: $bg;
+
+  @mixin cardStyle() {
+    background: #4d4d4d;
+    box-shadow: $shadow;
+  }
+
+  .profile,
+  .skill,
+  .project,
+  .project__header,
+  .experience__section,
+  .hobbies,
+  .blog,
+  .blog__header {
+    @include cardStyle();
+  }
+
+  h1 {
+    color: $heading;
+  }
+
+  h2,
+  h3 {
+    color: $heading2;
+  }
+
+  p,
+  small {
+    color: $text;
+  }
+
+  .icon img {
+    filter: invert(360);
+  }
+}

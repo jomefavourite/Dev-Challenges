@@ -1,0 +1,83 @@
+@include medium {
+  .container {
+    max-width: 1400px;
+  }
+
+  .profile {
+    display: flex;
+
+    &__image {
+      width: auto;
+      height: 200px;
+    }
+
+    &__content {
+      margin-left: 2rem;
+    }
+  }
+
+  .skills__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    .skill:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  .experience__section {
+    .experience__grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+
+      & > * {
+        flex-basis: 40%;
+        min-width: 20em;
+
+        &:last-child {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  .hobbies {
+    &__grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+
+      > div {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .project {
+    display: flex;
+    align-items: center;
+
+    &__content {
+      margin-left: 2rem;
+    }
+  }
+
+  .blog {
+    display: flex;
+    align-items: center;
+
+    &__image {
+      order: 2;
+      flex: 0.6;
+    }
+
+    &__content {
+      margin-right: 2rem;
+      flex: 1;
+    }
+  }
+}
