@@ -1,0 +1,81 @@
+$desktop: 700px;
+$mobile: 650px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@include desktop() {
+  .header__hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .aside {
+      margin-top: 0;
+      margin-left: 20px;
+      max-width: 350px;
+    }
+  }
+
+  .photo__four,
+  .photo__six {
+    margin-top: 2em;
+  }
+
+  .photo__five {
+    margin-top: 7em;
+  }
+
+  .team__gallery {
+    margin-top: 2em;
+  }
+
+  .team__gallery--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "one two three" "four five six";
+    place-content: center;
+  }
+}
+
+@include mobile() {
+  .team__gallery {
+    margin-top: 2em;
+  }
+
+  .photo__one,
+  .photo__two,
+  .photo__three,
+  .photo__four,
+  .photo__five,
+  .photo__six {
+    position: relative;
+    margin-top: 0em;
+  }
+
+  .photo__two,
+  .photo__four,
+  .photo__six {
+    margin-top: 3em;
+  }
+
+  img {
+    object-fit: contain;
+    object-position: 0 0;
+  }
+
+  h3 {
+    position: absolute;
+    top: 52vmin;
+  }
+}

@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: 'Montserrat';
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #4E5150;
+}
+
+h3 {
+  color: #333333;
+  font-size: 14px;
+}
+
+h1, h3, p, label {
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 20px 0 5px;
+  font-size: 12px;
+  color: #4F4F4F;
+}
+
+button {
+  display: block;
+  width: 166px;
+  height: 54px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background: #F2994A;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  margin: 1.5rem 0 0 auto;
+}
+
+button:hover {
+  background: #ee7811;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'Montserrat';
+}
+
+:-ms-input-placeholder {
+  font-family: 'Montserrat';
+}
+
+::-ms-input-placeholder {
+  font-family: 'Montserrat';
+}
+
+::placeholder {
+  font-family: 'Montserrat';
+}
+
+.error {
+  position: absolute;
+  display: none;
+  margin-left: 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: red;
+  font-weight: 400;
+}
+
+.main {
+  margin: 2rem auto;
+  max-width: 430px;
+}
+
+.main .billing {
+  margin: 1rem 0 2rem;
+  background: #F2F2F2;
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.main .billing_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .billing_card .item_image {
+  width: 130px;
+  height: 125px;
+  background: url("../images/photo1.png") center/cover;
+  border-radius: 20px;
+}
+
+.main .billing_card .item_image_one {
+  background: url("../images/photo1.png") center/cover;
+}
+
+.main .billing_card .item_image_two {
+  background: url("../images/photo2.png") center/cover;
+}
+
+.main .billing_card .item_content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 20px;
+}
+
+.main .billing_card .item_content .pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .5rem 0 2rem;
+}
+
+.main .billing_card .item_content .pricing p + p {
+  font-size: 10px;
+  margin-left: 10px;
+  text-decoration: line-through;
+  color: #828282;
+}
+
+.main .billing_card .item_content .pricing .price {
+  color: #F2994A;
+  font-size: 14px;
+}
+
+.main .billing_card .item_content .inc_dec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 130px;
+  height: 50px;
+  border: 2px solid #BDBDBD;
+  border-radius: 10px;
+  padding: .5rem;
+  text-align: center;
+}
+
+.main .billing_card .item_content .inc_dec span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main .billing_card .item_content .inc_dec h3 {
+  font-size: 16px;
+}
+
+.main .billing_card + .billing_card {
+  margin-top: 2rem;
+}
+
+.main .billing_total {
+  margin-top: 5rem;
+  color: #4F4F4F;
+}
+
+.main .billing_total_one, .main .billing_total_two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #BDBDBD;
+  padding: .6em;
+}
+
+.main .contact {
+  margin: 0 0 3rem 0;
+}
+
+.main .contact input:not([type="checkbox"]), .main .contact select {
+  display: block;
+  width: 100%;
+  padding: .5rem 0 .5rem 3rem;
+  border-radius: 10px;
+  border: 2px solid #BDBDBD;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  color: #4F4F4F;
+}
+
+.main .contact .icon {
+  position: relative;
+}
+
+.main .contact span {
+  position: absolute;
+  top: 45%;
+  left: 25px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.main .contact_fill1 {
+  margin: 2.5rem 0;
+}
+
+.main .contact_fill2 .two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .contact_fill2 .two_one {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 10px;
+}
+
+.main .contact_fill2 .two_one select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: 'Montserrat';
+  cursor: pointer;
+}
+
+.main .contact_fill2 .two_one span {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  left: 85%;
+  width: 20px;
+  height: 20px;
+  background: #d9d9d9;
+  border-radius: 5px;
+  pointer-events: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main .contact_fill2 .two_one .world {
+  top: 60%;
+  left: 20px;
+  background: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main .contact_fill2 .two_two {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 10px;
+}
+
+.main .contact_fill2 .two_two span {
+  top: 60%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main .contact_fill2 .three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0 0;
+  position: relative;
+}
+
+.main .contact_fill2 .three label {
+  margin: 0 10px 0;
+}
+
+.main .container > p {
+  text-align: center;
+  color: #828282;
+  font-size: 14px;
+}
+
+.main .success {
+  display: none;
+  margin-bottom: 2em;
+  padding: 1rem;
+  background: #54cc49;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.main .showSuccess {
+  display: block;
+  -webkit-animation: showS 200ms ease-in-out 200ms;
+          animation: showS 200ms ease-in-out 200ms;
+}
+
+@-webkit-keyframes showS {
+  100% {
+    display: none;
+  }
+}
+
+@keyframes showS {
+  100% {
+    display: none;
+  }
+}
+
+@media (min-width: 750px) {
+  .main {
+    max-width: none;
+  }
+  .main h1 {
+    font-size: 36px;
+  }
+  .main h3 {
+    font-size: 18px;
+  }
+  .main .sec_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-template: "contact billing";
+    grid-column-gap: 40px;
+    margin-top: 2.5rem;
+  }
+  .main .sec_container .billing {
+    grid-area: billing;
+    width: 350px;
+    height: 490px;
+    margin: 0 0 0 auto;
+  }
+  .main .sec_container .billing h3 {
+    font-size: 16px;
+  }
+  .main .sec_container .contact {
+    grid-area: contact;
+  }
+  .main .sec_container .contact_fill1 {
+    margin: 0 0 2.5rem;
+  }
+  .main .sec_container .contact input:not([type="checkbox"]), .main .sec_container .contact select {
+    padding: .7rem 0 .7rem 3rem;
+  }
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white;
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.material-icons.md-light {
+  color: white;
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+/*# sourceMappingURL=style.css.map */

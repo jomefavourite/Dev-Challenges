@@ -1,0 +1,58 @@
+// Desktop
+// font-size: 18px;
+// font-size: 16px;
+// font-size: 36px;
+
+$desktop: 750px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@include desktop() {
+  .main {
+    max-width: none;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    .sec_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template: "contact billing";
+      grid-column-gap: 40px;
+      margin-top: 2.5rem;
+      // margin-bottom: -2em;
+
+      .billing {
+        grid-area: billing;
+        width: 350px;
+        height: 490px;
+        margin: 0 0 0 auto;
+
+        h3 {
+          font-size: 16px;
+        }
+      }
+
+      .contact {
+        grid-area: contact;
+
+        &_fill1 {
+          margin: 0 0 2.5rem;
+        }
+
+        input:not([type="checkbox"]),select {
+          padding: .7rem 0 .7rem 3rem;
+        }
+      }
+    }
+  }
+}

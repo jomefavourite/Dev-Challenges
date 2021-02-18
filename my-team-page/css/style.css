@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+img {
+  display: block;
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+p {
+  font-family: "PT Serif", serif;
+}
+
+.header {
+  margin-top: 1em;
+}
+
+.header .aside {
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.header .aside h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.header .aside p {
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+
+.photo-combo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.photo-combo .vertical__text {
+  position: relative;
+  width: 25px;
+  height: 300px;
+}
+
+.photo-combo .vertical__text p {
+  text-transform: uppercase;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 200px;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.team__gallery--grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "one two" "three four" "five six";
+  place-content: center;
+}
+
+.photo__one,
+.photo__two,
+.photo__three,
+.photo__four,
+.photo__five,
+.photo__six {
+  margin-top: 3em;
+}
+
+.photo__one h3,
+.photo__two h3,
+.photo__three h3,
+.photo__four h3,
+.photo__five h3,
+.photo__six h3 {
+  margin-top: 0.5rem;
+}
+
+.photo__two,
+.photo__four,
+.photo__six {
+  margin-top: 7em;
+}
+
+.photo__one {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.photo__two {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.photo__three {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: three;
+}
+
+.footer {
+  text-align: center;
+  margin: 2em 0 2em;
+}
+
+.footer p {
+  font-family: "Poppins";
+  color: #a9a9a9;
+}
+
+@media (min-width: 700px) {
+  .header__hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header__hero .aside {
+    margin-top: 0;
+    margin-left: 20px;
+    max-width: 350px;
+  }
+  .photo__four,
+  .photo__six {
+    margin-top: 2em;
+  }
+  .photo__five {
+    margin-top: 7em;
+  }
+  .team__gallery {
+    margin-top: 2em;
+  }
+  .team__gallery--grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "one two three" "four five six";
+    place-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .team__gallery {
+    margin-top: 2em;
+  }
+  .photo__one,
+  .photo__two,
+  .photo__three,
+  .photo__four,
+  .photo__five,
+  .photo__six {
+    position: relative;
+    margin-top: 0em;
+  }
+  .photo__two,
+  .photo__four,
+  .photo__six {
+    margin-top: 3em;
+  }
+  img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
+  h3 {
+    position: absolute;
+    top: 52vmin;
+  }
+}
+/*# sourceMappingURL=style.css.map */

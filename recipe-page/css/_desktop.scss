@@ -1,0 +1,90 @@
+$desktop: 650px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@include desktop() {
+  .main {
+    
+    h1 {
+      font-size: 48px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    &_details {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .times {
+      width: 216px;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+      margin: 0 0 0 auto;
+      border-radius: 12px;
+      padding: 4em 1em;
+
+      .time {
+        justify-content: center;
+
+        > div {
+          width: 90px;
+          margin-top: 1em;
+        }
+
+        p:first-child {
+          font-size: 10px;
+        }
+
+        p:last-child {
+          font-size: 14px;
+        }
+      }
+
+      .times2 {
+        flex-direction: column;
+      }
+    }
+
+    .ingredients {
+      margin-top: 0;
+      p {
+        font-size: 16px;
+      }
+
+      input {
+        margin-right: 15px;
+        transform: scale(1.4);
+      }
+    }
+
+    .desktop_wrap {
+      display: grid;
+      grid-template-areas: "first second";
+      grid-template-columns: 1fr .5fr;
+      grid-gap: 20px;
+  
+      .wrap_1 {
+        grid-area: first;
+      }
+  
+      .wrap_2 {
+        grid-area: second;
+      }
+    }
+
+    .source {
+      font-size: 16px;
+    }
+  }
+}

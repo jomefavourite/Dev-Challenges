@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.flx2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+p {
+  line-height: 25px;
+  color: #333333;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", sans-serif;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.main {
+  margin: 1.5rem auto;
+}
+
+.main h1 {
+  font-size: 24px;
+}
+
+.main_details {
+  font-style: italic;
+}
+
+.main_details .flx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: .5rem 0 0;
+}
+
+.main_details .icon {
+  display: block;
+  width: 20px;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.main_details p {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  font-size: 12px;
+  max-width: 572px;
+  line-height: 15px;
+}
+
+.main_details_img {
+  border-radius: 15px;
+  margin: 1.5rem 0;
+}
+
+.main .times .gold {
+  color: #F2994A;
+}
+
+.main .times .times2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.main .times .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+}
+
+.main .times .time p {
+  line-height: normal;
+  margin-left: 5px;
+}
+
+.main .times .time p:first-child {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 8px;
+  color: #BDBDBD;
+}
+
+.main .times .time p:last-child {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.main .ingredients {
+  margin: 2em 0;
+}
+
+.main .ingredients h2 {
+  margin-bottom: 1rem;
+}
+
+.main .ingredients h3 {
+  font-style: italic;
+  margin: 0 0 1.5rem;
+  font-weight: 300;
+}
+
+.main .ingredients p {
+  font-size: 14px;
+}
+
+.main .ingredients input {
+  margin-right: 10px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main .ingredients .ingredients__one > div {
+  margin-top: .3em;
+}
+
+.main .ingredients .ingredients__two {
+  margin-top: 2em;
+}
+
+.main .ingredients .ingredients__two > div {
+  margin-top: .3em;
+}
+
+.main .intructions {
+  margin-bottom: 2em;
+}
+
+.main .intructions .flx3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .intructions h2 {
+  margin-bottom: 2rem;
+}
+
+.main .intructions > div + div {
+  margin-top: 1em;
+}
+
+.main .intructions .num {
+  display: block;
+  width: 50px;
+  height: 40px;
+  background: #F2994A;
+  padding: 0 1rem;
+  border-radius: 10px;
+  font-family: "Playfair Display", sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.main .source {
+  margin-bottom: 5rem;
+  color: #A9A9A9;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.main .fotter {
+  text-align: center;
+  color: #A9A9A9;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (min-width: 650px) {
+  .main h1 {
+    font-size: 48px;
+  }
+  .main h2 {
+    font-size: 24px;
+  }
+  .main h3 {
+    font-size: 18px;
+  }
+  .main_details p {
+    font-size: 14px;
+  }
+  .main .times {
+    width: 216px;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+    margin: 0 0 0 auto;
+    border-radius: 12px;
+    padding: 4em 1em;
+  }
+  .main .times .time {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .times .time > div {
+    width: 90px;
+    margin-top: 1em;
+  }
+  .main .times .time p:first-child {
+    font-size: 10px;
+  }
+  .main .times .time p:last-child {
+    font-size: 14px;
+  }
+  .main .times .times2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .ingredients {
+    margin-top: 0;
+  }
+  .main .ingredients p {
+    font-size: 16px;
+  }
+  .main .ingredients input {
+    margin-right: 15px;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  .main .desktop_wrap {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "first second";
+    -ms-grid-columns: 1fr .5fr;
+        grid-template-columns: 1fr .5fr;
+    grid-gap: 20px;
+  }
+  .main .desktop_wrap .wrap_1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: first;
+  }
+  .main .desktop_wrap .wrap_2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: second;
+  }
+  .main .source {
+    font-size: 16px;
+  }
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-gold {
+  color: #F2994A;
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: white;
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+/*# sourceMappingURL=style.css.map */

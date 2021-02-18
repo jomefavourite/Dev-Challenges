@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <h1>Checkout</h1>
+      <section class="sec_container">
+        <section class="billing">
+          <div class="billing_card">
+            <div class="item_image item_image_one"></div>
+            <div class="item_content">
+              <h3>Vintage Backbag</h3>
+              <div class="pricing">
+                <p class="price" id="price1">$54.99</p>
+                <p class="del">$94.99</p>
+              </div>
+              <div class="inc_dec">
+                <span class="dec material-icons md-dark md-18" id="dec1">remove</span>
+                <h3 class="change" id="change1">1</h3>
+                <span  class="inc material-icons md-dark md-18" id="inc1">add</span>
+              </div>
+            </div>
+          </div>
+          <div class="billing_card">
+            <div class="item_image item_image_two"></div>
+            <div class="item_content">
+              <h3>Levi Shoes</h3>
+              <div class="pricing">
+                <p class="price" id="price2">$74.99</p>
+                <p class="del">$124.99</p>
+              </div>
+              <div class="inc_dec">
+                <span class="dec material-icons md-dark md-18" id="dec2">remove</span>
+                <h3  class="change" id="change2">1</h3>
+                <span class="inc material-icons md-dark md-18" id="inc2">add</span>
+              </div>
+            </div>
+          </div>
+          <div class="billing_total">
+            <div class="billing_total_one">
+              <h4>Shipping</h4>
+              <p id="shipping">$19</p>
+            </div>
+            <div class="billing_total_two">
+              <h4>Total</h4>
+              <p id="total">$148.98</p>
+            </div>
+          </div>
+        </section>
+    
+        <section class="contact">
+          <div class="contact_fill1">
+            <h3>Contact infomation</h3>
+    
+            <form action="#">
+              <div class="icon">
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Enter your email..." id="email">
+                <p class="error">Error</p>
+                <span class="material-icons md-dark">email</span>
+              </div>
+              <div class="icon">
+                <label for="phone">Phone</label>
+                <input type="tel" placeholder="Enter your phone..." id="phone">
+                <p class="error">Error</p>
+                <span class="material-icons md-dark">phone</span>
+              </div>
+            </form>
+          </div>
+          <div class="contact_fill2">
+            <h3>Shipping address</h3>
+    
+            <form action="#">
+              <div class="icon">
+                <label for="Fullname">Fullname</label>
+                <input type="text" placeholder="Rodney Cotton" id="Fullname" value="Rodney Cotton">
+                <p class="error">Error</p>
+                <span class="material-icons md-dark">account_circle</span>
+              </div>
+              <div class="icon">
+                <label for="address">Address</label>
+                <input type="text" placeholder="Your address.." id="address">
+                <p class="error">Error</p>
+                <span class="material-icons md-dark">home</span>
+              </div>
+              <div class="icon">
+                <label for="city">City</label>
+                <input type="text" placeholder="Your city.." id="city">
+                <p class="error">Error</p>
+                <span class="material-icons md-dark">location_city</span>
+              </div>
+              <div class="two">
+                <div class="two_one">
+                  <label for="country">Country</label>
+                  <span class="material-icons md-dark world">public</span>
+                  <select name="country" id="country">
+                    <option value="Nigeria">South Africa</option>
+                    <option value="Nigeria">Ghana</option>
+                    <option value="Nigeria">Nigeria</option>
+                  </select>
+                  <span class="material-icons">keyboard_arrow_down</span>
+                </div>
+                <div class="two_two icon">
+                  <label for="postal">Postal Code</label>
+                  <input type="text" placeholder="Your postal code.." id="postal">
+                  <p class="error">Error</p>
+                  <span class="material-icons md-dark">markunread_mailbox</span>
+                </div>
+              </div>
+              <div class="three">
+                <input type="checkbox" name="check" id="check">
+                <label for="check">Save this information for next time</label>
+              </div>
+              <button type="submit">Continue</button>
+            </form>
+          </div>
+        </section>
+      </section>
+      <div class="success">
+        <h2>Successful</h2>
+      </div>
+      <p>Jome Favourite @ DevChallenges.io</p>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

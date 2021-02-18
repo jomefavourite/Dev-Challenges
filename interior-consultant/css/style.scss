@@ -1,0 +1,238 @@
+// font-family: Montserrat;
+// font-family: Lora;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,562;0,600;0,700;1,400;1,500;1,562;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --bg: #181719;
+  --text: #ffffff;
+
+  font-family: 'Montserrat';
+  background: var(--bg);
+  color: var(--text);
+  // overflow-x: hidden;
+}
+
+.display-overf {
+  overflow: hidden !important;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5em;
+
+  .logo {
+    font-family: 'Lora', serif;
+    display: inline-block;
+    border: 2px solid #ffffff;
+    padding: .6rem;
+    text-transform: uppercase;
+  }
+
+  
+  .nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    text-align: center;
+    z-index: 1;
+
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    li {
+      font-weight: 600;
+      list-style-type: none;
+      cursor: pointer;
+    }
+
+    li + li {
+      margin-top: 2em;
+    }
+
+    li:hover {
+      transform: scale(1.3);
+    }
+
+    
+  }
+  
+  .display {
+    display: block;
+  }
+
+  .ham {
+    z-index: 100;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: var(--text);
+      transition: 200ms;
+      border-radius: 10px;
+    }
+
+    span + span {
+      margin-top: 4px;
+    }
+  }
+  
+  .change .ham1 {
+    transform: rotate(-45deg) translate(-6px, 2px);
+  }
+  .change .ham2 {
+    opacity: 0;
+  }
+  .change .ham3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+  }
+}
+
+
+.main {
+  .section1 {
+    margin-top: 2.5em;
+    // font-size: clamp(1.5rem, 1rem, 2rem);
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    
+    p:nth-child(2) {
+      max-width: 300px;
+      margin: 1.2em 0 1rem;
+      line-height: 1.5;
+      font-weight: 300;
+      // font-size: clamp(1em, 18px, 2em);
+    }
+
+    p:nth-child(3) {
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+      margin: 0 0 2rem;
+    }
+
+    .read::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -50px;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 3px;
+      background: #fff;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .read::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -63px;
+      border-top: 5px solid transparent;
+      border-left: 8px solid #fff;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      transform: translate(-50%, -50%);
+    }
+
+  }
+
+  .section2 {
+    position: relative;
+
+    .img {
+      width: 100%;
+      height: 40vh;
+      background: url("../images/photo1.png") no-repeat center  / cover;
+    }
+
+    .card {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      right: 0;
+      width: 80%;
+      background: var(--bg);
+      box-shadow: 0 10px 20px -5px #000000;
+      padding: 1rem;
+      margin: auto;
+      max-width: 340px;
+      
+      h3 {
+        font-family: 'Lora', serif;
+        font-size: 1.4rem;
+      }
+
+      .card__details {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+
+        .card__info {
+          small {
+            color: #ffffff75;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  
+  p {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    margin: 6em 0 2%;
+  }
+
+  p::before {
+    content: "";
+    display: block;
+    margin-bottom: 1em;
+    width: 70%;
+    height: 2px;
+    background: #fff;
+    margin: 0 auto 1em auto;
+  }
+}
+
+@import "desktop";

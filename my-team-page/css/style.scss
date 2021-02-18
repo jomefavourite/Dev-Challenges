@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+img {
+  display: block;
+  // width: clamp(200%, calc(15vw + 1em), 70em);
+  width: 80%;
+  object-fit: cover;
+  // object-fit: contain;
+  // object-position: 0 0;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+p {
+  font-family: "PT Serif", serif;
+}
+
+.header {
+  margin-top: 1em;
+  .aside {
+    margin-top: 2rem;
+    font-family: "Poppins", sans-serif;
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 0.5em;
+    }
+    p {
+      line-height: 1.4;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
+
+.photo-combo {
+  position: relative;
+  display: flex;
+  width: 100%;
+
+  .vertical__text {
+    position: relative;
+    width: 25px;
+    height: 300px;
+
+    p {
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 0;
+      // right: -30em;
+      left: 25px;
+      width: 200px;
+      transform-origin: 0 0;
+    }
+  }
+}
+
+.team__gallery--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "one two" "three four" "five six";
+  place-content: center;
+}
+
+.photo__one,
+.photo__two,
+.photo__three,
+.photo__four,
+.photo__five,
+.photo__six {
+  margin-top: 3em;
+
+  h3 {
+    margin-top: 0.5rem;
+  }
+}
+
+.photo__two,
+.photo__four,
+.photo__six {
+  margin-top: 7em;
+}
+
+.photo__one {
+  grid-area: one;
+}
+.photo__two {
+  grid-area: two;
+}
+.photo__three {
+  grid-area: three;
+}
+
+.footer {
+  text-align: center;
+  margin: 2em 0 2em;
+
+  p {
+    font-family: "Poppins";
+    color: #a9a9a9;
+  }
+}
+
+@import "desktop";

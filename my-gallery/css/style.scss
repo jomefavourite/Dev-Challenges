@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.hero {
+  padding: 3em 0;
+  text-align: center;
+  &-img {
+    width: 30vmin;
+    border-radius: 40px;
+    max-width: 230px;
+    margin-bottom: 0.3rem;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: clamp(14px, calc(5vw + 1em), 24px);
+    color: #4e5150;
+  }
+  h3,
+  h4 {
+    color: #4e5150;
+  }
+
+  .loca {
+    margin: 1rem 0;
+    color: #a9a9a9;
+  }
+
+  .boxes {
+    display: flex;
+    justify-content: center;
+
+    .box {
+      width: 100px;
+      height: 67px;
+      background: #e5e5e5;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & + .box {
+        margin-left: 2vmax;
+      }
+
+      &__content {
+        h3 {
+          font-weight: 600;
+          font-size: clamp(12px, calc(5vw + 1em), 18px);
+          line-height: 22px;
+          text-align: center;
+          color: #4e5150;
+        }
+
+        h4 {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          text-align: center;
+          color: #4e5150;
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.9fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "one two two"
+    "three three four"
+    "five six four";
+  grid-gap: 1.5vmax;
+  // grid-gap: 10px;
+
+  .photo {
+    border-radius: 5vmin;
+
+    img {
+      background-size: cover;
+      border-radius: 5vmin;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .photo1 {
+    grid-area: one;
+  }
+  .photo2 {
+    grid-area: two;
+  }
+  .photo3 {
+    grid-area: three;
+  }
+  .photo4 {
+    grid-area: four;
+
+    img {
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .photo5 {
+    grid-area: six;
+  }
+  .photo6 {
+    grid-area: five;
+  }
+}
+
+.name {
+  margin: 10vmin 0 3em;
+}

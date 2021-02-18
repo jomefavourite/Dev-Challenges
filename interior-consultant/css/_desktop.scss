@@ -1,0 +1,111 @@
+$desktop: 700px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 800px) and (min-width: 450px) {
+    @content;
+  }
+}
+
+@include desktop() {
+
+  .header {
+    display: flex;
+
+    .ham {
+      display: none;
+    }
+
+    .nav {
+      display: block;
+      width: 90%;
+      height: 43px;
+      background: none;
+      margin: 1.5rem auto 0;
+      text-align: right;
+      max-width: 1440px;
+      
+      ul {
+        display: flex;
+        max-width: fit-content;
+        left: 0;
+        right: 0;
+        margin: 0 0 0 auto;
+        transform: translate(-0%,-50%);
+        
+        li {
+          list-style-type: none;
+          cursor: pointer;
+        }
+  
+        li + li {
+          margin: 0 0 0 5vw;
+        }
+      }
+    }
+
+  }
+
+
+  .main {
+    display: grid;
+    grid-template-columns: .4fr .8fr;
+    gap: 10px;
+    padding-top: 7em;
+
+    .section1 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+
+    .section2 {
+      position: relative;
+      .img {
+        height: 65vh;
+      }
+
+      .card {
+        left: 80%;
+        right: -10px;
+        margin: 0;
+        transform: translateX(-80%);
+      }
+    }
+
+  }
+
+  .footer {
+  
+    p {
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      margin: 6em 0 0em;
+    }
+  
+    p::before {
+      content: "";
+      display: none;
+    }
+  }
+}
+
+
+
+@include tablet() {
+ 
+  .main {
+    .section1 {
+      font-size: 1.1rem;
+
+      p:nth-child(2) {
+        max-width: 350px;
+      }
+    }
+  }
+}
